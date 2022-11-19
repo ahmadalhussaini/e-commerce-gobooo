@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="icon" href="./assets/images/Capture.PNG" />
+    <title>Gabooo</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <section class="top-section">
+        <div class="user-information">
+          <p>Gabooo@gmail.com</p>
+          <p>+0962-780-1224-28</p>
+        </div>
+        <div class="social-info">
+          <div>
+            <img src="./assets/images/google.svg" />
+            <img src="./assets/images/twitter.svg" />
+            <img src="./assets/images/date.svg" />
+          </div>
+          <div>
+            <span id="Btn-login">Login</span>
+            <span id="Btn-Register">Register</span>
+          </div>
+        </div>
+      </section>
+      <img
+        class="logo-containe"
+        src="./assets/images/menu.svg"
+        onclick="menuBar()"
+        alt="burger Menu"
+      />
+      <section class="navpar-header nav">
+        <ul>
+          <li>Woman</li>
+          <li>Man</li>
+          <li>Children</li>
+          <li>Collection</li>
+          <li><button>Gabooo</button></li>
+          <li>Spring</li>
+          <li>Summer</li>
+          <li>Fall</li>
+          <li>Winter</li>
+        </ul>
+      </section>
+      <div class="about-fashion">
+        <span>
+          <p>
+            FASHION THAT LIKES<br />
+            TO SAY YES
+          </p>
+          <p>
+            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+            Vestibulum ac <br />
+            diam sit amet quam vehicula elementum sed sit amet dui. Vivamus
+            suscipit tortor<br />
+            eget felis porttitor volutpat.
+          </p>
+          <button>SHOP NOW</button>
+        </span>
+        <img src="./assets/images/fashion.jpg" />
+      </div>
+    </header>
+    <div id="Modal-login" class="modal">
+      <div class="modal-content">
+        <span class="close" id="close-login">&times;</span>
+        <h2>Login Form</h2>
+        <form class="login">
+          <div class="container">
+            <label>Email : </label>
+            <input
+              type="email"
+              placeholder="Enter Email"
+              name="username"
+              required
+            />
+            <label>Password : </label>
+            <input
+              type="password"
+              placeholder="Enter Password"
+              name="password"
+              required
+            />
+            <button type="submit">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="Modal-Register" class="modal">
+      <div class="modal-content">
+        <span class="close" id="close-Register">&times;</span>
+        <h2>Register Form</h2>
+        <form class="Register">
+          <div class="container">
+            <label>Username : </label>
+            <input
+              type="text"
+              placeholder="Enter Username"
+              name="username"
+              required
+            />
+            <label>Email : </label>
+            <input
+              type="email"
+              placeholder="Enter Email"
+              name="username"
+              required
+            />
+            <label>Phone : </label>
+            <input
+              type="text"
+              placeholder="Enter phone"
+              name="username"
+              required
+            />
+            <label>Password : </label>
+            <input
+              type="password"
+              id="txtPassword"
+              placeholder="Enter Password"
+              name="password"
+              required
+            />
+            <label>confirm password : </label>
+            <input
+              type="password"
+              id="txtConfirmPassword"
+              placeholder="Enter confirm password"
+              name="password"
+              required
+            />
+            <p class="Passwordsnotmatch" id="Passwordsnotmatch">
+              Passwords do not match.
+            </p>
+            <p class="Passwordsmatch" id="Passwordsmatch">
+              Passwords do match.
+            </p>
+            <button type="submit" id="Register">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <section class="shopping-cart">
+      <div class="currencies">
+        <span>en <img src="./assets/images/nav-down-arrow.svg" /></span>
+        <span>usd <img src="./assets/images/nav-down-arrow.svg" /></span>
+      </div>
+      <div class="aside__subscribe">
+        <ul>
+          <li>Shopping Cart</li>
+          <li>WishList (7)</li>
+          <li>Checkout</li>
+          <li>My Account</li>
+        </ul>
+        <form>
+          <div>
+            <input type="text" placeholder="search" />
+            <span> <img src="./assets/images/search.svg" /></span>
+          </div>
+          <div>
+            <span> <img src="./assets/images/shopping.png" /></span>
+            <input type="text" placeholder="$97.00" />
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="popular-fashion">
+      <p class="title-popular">Popular Now</p>
+      <ul>
+        <li>Trending</li>
+        <li>Bestsellers</li>
+        <li>New</li>
+        <li>On Sale</li>
+      </ul>
+      <div class="collection-popular">
+        <div>
+          <img src="./assets/images/fashion.jpg" />
+          <p>PARIS JACKET</p>
+          <span>$89,99</span>
+        </div>
+        <div>
+          <img src="./assets/images/fashion.jpg" />
+          <p>PARIS JACKET</p>
+          <span>$89,99</span>
+        </div>
+        <div>
+          <img src="./assets/images/fashion.jpg" />
+          <p>PARIS JACKET</p>
+          <span>$89,99</span>
+        </div>
+        <div>
+          <img src="./assets/images/fashion.jpg" />
+          <p>PARIS JACKET</p>
+          <span>$89,99</span>
+        </div>
+      </div>
+    </section>
+    <section class="winter__collection">
+      <h4 class="winter-title">New Winter Collection</h4>
+      <p>
+        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+        Vestibulum ac <br />
+        diam sit amet quam vehicula elementum sed sit amet dui. Vivamus suscipit
+        tortor<br />
+        eget felis porttitor volutpat.
+      </p>
+      <button>All collection</button>
+      <div class="collection-popular">
+        <div>
+          <img src="./assets/images/fashion.jpg" />
+          <span>
+            <p>PARIS JACKET</p>
+            <p>$89,99</p>
+          </span>
+        </div>
+        <div>
+          <img src="./assets/images/fashion.jpg" />
+          <span>
+            <p>PARIS JACKET</p>
+            <p>$89,99</p>
+          </span>
+        </div>
+        <div>
+          <img src="./assets/images/fashion.jpg" />
+          <span>
+            <p>PARIS JACKET</p>
+            <p>$89,99</p>
+          </span>
+        </div>
+        <div>
+          <img src="./assets/images/fashion.jpg" />
+          <span>
+            <p>PARIS JACKET</p>
+            <p>$89,99</p>
+          </span>
+        </div>
+      </div>
+    </section>
+    <div class="season-sale">
+      <p>
+        <span>SEASON SALE</span>
+        UP TO 70%
+      </p>
+    </div>
+    <main>
+      <div class="Subscribe__Newsletter">
+        <p>Subscribe to Newsletter:</p>
+        <form>
+          <input placeholder="Your Mail" />
+          <button>Subscribe</button>
+        </form>
+      </div>
+      <div class="collection">
+        <div class="type-collection">
+          <div class="definition">
+            <p>From Our Collection</p>
+            <p>
+              Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo,
+              <br />
+              lacinia eget consectetur sed, convallis at tellus.
+            </p>
+          </div>
+          <div class="type">
+            <button>Winter</button>
+            <button>Spring</button>
+            <button>Summer</button>
+            <button>Fall</button>
+          </div>
+        </div>
+        <div class="collection-popular">
+          <div>
+            <img src="./assets/images/fashion.jpg" />
+            <p>PARIS JACKET</p>
+            <span>$89,99</span>
+          </div>
+          <div>
+            <img src="./assets/images/fashion.jpg" />
+            <p>PARIS JACKET</p>
+            <span>$89,99</span>
+          </div>
+          <div>
+            <img src="./assets/images/fashion.jpg" />
+            <p>PARIS JACKET</p>
+            <span>$89,99</span>
+          </div>
+          <div>
+            <img src="./assets/images/fashion.jpg" />
+            <p>PARIS JACKET</p>
+            <span>$89,99</span>
+          </div>
+
+          <div>
+            <img src="./assets/images/fashion.jpg" />
+            <p>PARIS JACKET</p>
+            <span>$89,99</span>
+          </div>
+          <div>
+            <img src="./assets/images/fashion.jpg" />
+            <p>PARIS JACKET</p>
+            <span>$89,99</span>
+          </div>
+          <div>
+            <img src="./assets/images/fashion.jpg" />
+            <p>PARIS JACKET</p>
+            <span>$89,99</span>
+          </div>
+          <div>
+            <img src="./assets/images/fashion.jpg" />
+            <p>PARIS JACKET</p>
+            <span>$89,99</span>
+          </div>
+        </div>
+        <button class="button-show-more">Show Me More</button>
+      </div>
+    </main>
+    <section class="Story__Behind">
+      <img src="./assets/images/fashion.jpg" />
+      <span>
+        <p class="title">Story Behind</p>
+        <button>gabooo</button>
+        <p>
+          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+          <br />
+          Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
+          <br />
+          Vivamus suscipit tortor eget felis porttitor volutpat. Accumsan id
+          <br />
+          imperdiet et, porttitor at sem. Vestibulum ac diam sit amet quam
+          <br />
+          vehisuscipit tortor eget felis.
+        </p>
+        <button>Contact Us</button>
+      </span>
+    </section>
+    <footer class="footer">
+      <div class="definition">
+        <button>gabooo</button>
+        <p>
+          Pellentesque in ipsum id orci porta dapibus. Vivamus<br />
+          magna justo, lacinia eget consectetur sed, convallis <br />at tellus.
+        </p>
+        <p>
+          Created by Graphberry,Belgrade,Serbia <br />
+          © 2017 -<span>Gabooo</span> .Inc
+        </p>
+      </div>
+      <ul>
+        <li>Links</li>
+        <li>Home</li>
+        <li>Sign In</li>
+        <li>Register</li>
+        <li>FAQ</li>
+        <li>Support</li>
+        <li>Terms and Conditions</li>
+      </ul>
+      <ul>
+        <li>Shopping</li>
+        <li>Shopping Cart</li>
+        <li>Winter</li>
+        <li>Spring</li>
+        <li>Summer</li>
+        <li>Fall</li>
+        <li>Collection</li>
+      </ul>
+      <div class="section-contact-us">
+        <span>Contact Us</span>
+        <p>
+          Get in touch with us via mail phone.We are waiting for<br />
+          your call or message
+        </p>
+        <button>graphberry@gmail.com</button>
+        <div>
+          <img src="./assets/images/google.svg" />
+          <img src="./assets/images/facebook.svg" />
+          <img src="./assets/images/twitter.svg" />
+          <img src="./assets/images/date.svg" />
+        </div>
+      </div>
+    </footer>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

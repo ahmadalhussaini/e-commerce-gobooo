@@ -1,0 +1,676 @@
+/***********  Variables and function  *************/
+$primary: #f9f9f9;
+$secondary: #fcfcfc;
+$brown: #d3995f;
+$dark: #292929;
+$gray: #686868;
+$Montserrat: "Montserrat";
+$Lora: "Lora";
+@mixin dark-sections {
+  background-color: $dark;
+  padding: 0 16.5%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: $primary;
+}
+@mixin navbar-section {
+  background-color: $secondary;
+  padding: 0 20%;
+}
+@mixin collection-items {
+  display: flex;
+  margin: 50px 0 30px 0;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+
+  div {
+    width: 320px;
+    margin: 3px 7px;
+
+    img {
+      height: 320px;
+      width: 270px;
+    }
+    p {
+      margin: 10px 0;
+    }
+    span {
+      color: $brown;
+    }
+  }
+}
+@mixin default-button($textColor) {
+  color: $textColor;
+  border: 1px solid $brown;
+  font-size: 20px;
+  letter-spacing: 2px;
+  background-color: unset;
+}
+/*********** public style  ***********/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-style: normal;
+  font-family: $Montserrat;
+  font-weight: 400;
+  font-size: 15px;
+}
+body {
+  overflow-x: hidden;
+}
+/***********  Desktop Devices  *************/
+
+/***********  header Section  *************/
+.header {
+  .top-section {
+    @include dark-sections;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    font-size: 12px;
+    font-weight: 400;
+    .user-information {
+      display: flex;
+      margin-bottom: 10px;
+      :last-child {
+        margin-left: 30px;
+      }
+    }
+    .social-info {
+      display: flex;
+      img {
+        padding: 0 20px;
+      }
+      div {
+        span {
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+  .logo-containe {
+    display: none;
+    width: 100%;
+    background-color: #aaaaaa;
+    height: 50px;
+  }
+  .navpar-header {
+    @include navbar-section;
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      li {
+        margin-top: 45px;
+        button {
+          height: 50px;
+          width: 130px;
+          border: 4px solid black;
+          background-color: unset;
+          font-size: 20px;
+          font-weight: 600;
+          margin-top: -13px;
+          letter-spacing: 5px;
+        }
+      }
+    }
+  }
+  .nav-bar-open {
+    display: none;
+  }
+  .about-fashion {
+    @include navbar-section;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    margin-bottom: 10px;
+    span {
+      margin-top: 80px;
+      :first-child {
+        font-size: 50px;
+        color: $brown;
+      }
+      :nth-child(2) {
+        line-height: 30px;
+        color: $gray;
+        font-family: $Lora;
+      }
+      :last-child {
+        width: 200px;
+        height: 50px;
+        @include default-button(#2a2a2a);
+        font-size: 15px;
+        margin-top: 20px;
+      }
+    }
+    img {
+      width: 345px;
+      height: 450px;
+    }
+  }
+}
+/***********  model login Section  *************/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  margin: 10px 5px;
+}
+
+.login,
+.Register {
+  border: 3px solid #f1f1f1;
+  .container {
+    padding: 25px;
+    background-color: $secondary;
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+      width: 100%;
+      margin: 8px 0;
+      padding: 12px 20px;
+      display: inline-block;
+      border: 2px solid $brown;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: $brown;
+      width: 100%;
+      color: white;
+      padding: 15px;
+      margin: 10px 0px;
+      border: none;
+      cursor: pointer;
+    }
+    .Passwordsnotmatch {
+      display: none;
+      color: red;
+      font-size: 20px;
+    }
+    .Passwordsmatch {
+      display: none;
+      color: green;
+      font-size: 20px;
+    }
+    button:hover {
+      opacity: 0.7;
+    }
+    .cancelbtn {
+      width: auto;
+      padding: 10px 18px;
+      margin: 10px 5px;
+    }
+  }
+}
+
+/***********  shopping cart Section  *************/
+.shopping-cart {
+  @include dark-sections;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  .currencies {
+    span {
+      padding: 0 10px;
+    }
+  }
+  .aside__subscribe {
+    display: flex;
+    flex-wrap: wrap;
+    ul {
+      list-style: none;
+      display: flex;
+      li {
+        margin: 0 10px;
+      }
+    }
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      :first-child {
+        width: 260px;
+        margin-right: 10px;
+        input {
+          width: 240px;
+        }
+      }
+      :last-child {
+        width: 117px;
+        input {
+          width: 97px;
+        }
+      }
+      div {
+        display: flex;
+        background-color: $brown;
+        height: 39px;
+        input {
+          background-color: white;
+          border: 1px solid white;
+          padding-left: 10px;
+        }
+        span {
+          height: 20px;
+          width: 35px !important;
+          img {
+            height: 20px;
+            width: 20px !important;
+            margin: 10px 0 0 5px !important;
+          }
+        }
+      }
+    }
+  }
+}
+/***********  popular fashion Section  *************/
+.popular-fashion {
+  padding: 0 16.5%;
+  text-align: center;
+  .title-popular {
+    font-size: 30px;
+    color: $brown;
+    margin: 80px 0 40px 0;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    li {
+      margin: 0 20px;
+    }
+  }
+  .collection-popular {
+    @include collection-items;
+  }
+}
+/***********  winter collection Section  *************/
+.winter__collection {
+  background-color: $secondary;
+  padding: 0 16.5%;
+  text-align: center;
+  .winter-title {
+    font-size: 30px;
+    color: $brown;
+    padding: 60px 0 30px 0;
+  }
+  p {
+    line-height: 30px;
+    color: $gray;
+    font-family: $Lora;
+  }
+  button {
+    width: 200px;
+    height: 50px;
+    @include default-button(#2a2a2a);
+    margin: 20px 0 50px 0;
+  }
+
+  .collection-popular {
+    @include collection-items;
+    div {
+      img {
+        width: 100%;
+        height: 200px;
+      }
+    }
+
+    span {
+      margin-top: 0px;
+
+      display: flex;
+      justify-content: space-between;
+      :first-child {
+        color: black;
+      }
+      :last-child {
+        color: $brown;
+      }
+    }
+  }
+}
+/***********  season sale Section  *************/
+.season-sale {
+  @include dark-sections;
+  height: 300px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  span {
+    color: $brown;
+    font-size: 50px;
+    display: block;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 30px;
+  }
+}
+/***********  Main Section  *************/
+main {
+  .Subscribe__Newsletter {
+    @include navbar-section;
+    height: 115px;
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    p {
+      font-size: 20px;
+    }
+    form {
+      input {
+        width: 471px;
+        height: 46px;
+        border: 1px solid $brown;
+        padding-left: 30px;
+      }
+      button {
+        width: 170px;
+        height: 50px;
+        background-color: $brown;
+        border: 1px solid white;
+        color: white;
+      }
+    }
+  }
+  .collection {
+    padding: 0 16.5%;
+    .type-collection {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+      .definition {
+        :first-child {
+          font-size: 30px;
+          color: $brown;
+          margin-bottom: 40px;
+        }
+        :last-child {
+          font-family: $Lora;
+          line-height: 30px;
+        }
+      }
+      .type {
+        button {
+          width: 104px;
+          height: 51px;
+          margin: 5px;
+          border: 1px solid $brown;
+          background-color: unset;
+        }
+      }
+    }
+
+    .collection-popular {
+      @include collection-items;
+    }
+  }
+  .button-show-more {
+    width: 201px;
+    height: 51px;
+    @include default-button(#2a2a2a);
+    font-size: 15px;
+    display: block;
+    margin: 20px auto;
+  }
+}
+/***********  Story BehindSection  *************/
+.Story__Behind {
+  margin-top: 20px;
+
+  display: flex;
+
+  img {
+    height: 500px;
+    width: 50%;
+  }
+  span {
+    width: 50%;
+    padding: 3% 0 0 7%;
+    :first-child {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+    :nth-child(2) {
+      width: 117px;
+      height: 39px;
+      @include default-button($brown);
+      font-size: 15px;
+
+      margin-bottom: 30px;
+    }
+    :nth-child(3) {
+      line-height: 30px;
+      margin-bottom: 20px;
+    }
+    :nth-child(4) {
+      @include default-button(#2a2a2a);
+      font-size: 15px;
+      width: 171px;
+      height: 51px;
+    }
+  }
+}
+/***********  footer Section  *************/
+.footer {
+  @include dark-sections;
+
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  > div {
+    margin: 0 20px;
+  }
+  > ul {
+    margin: 0 20px;
+    list-style: none;
+    li {
+      margin-bottom: 20px;
+    }
+  }
+  .definition {
+    button {
+      width: 117px;
+      height: 39px;
+      @include default-button($brown);
+
+      letter-spacing: 4px;
+
+      margin-bottom: 30px;
+    }
+    + p {
+      line-height: 30px;
+      font-family: $Lora;
+    }
+    :last-child {
+      margin-top: 30px;
+      font-size: 13px;
+      line-height: 30px;
+      font-family: $Lora;
+      span {
+        color: $brown;
+      }
+    }
+  }
+  .section-contact-us {
+    p {
+      margin-top: 30px;
+      font-size: 13px;
+      line-height: 30px;
+    }
+    button {
+      margin-top: 30px;
+      @include default-button(white);
+      font-size: 15px;
+      width: 370px;
+      height: 46px;
+    }
+    div {
+      width: 40%;
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+/***********  tablet Devices  *************/
+@media screen and (max-width: 1440px) {
+  .header {
+    .top-section,
+    .navpar-header,
+    .about-fashion {
+      padding: 5px 10px;
+    }
+    .about-fashion {
+      button {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .shopping-cart {
+    justify-content: space-between;
+    padding: 20px;
+    .currencies {
+      margin-bottom: 10px;
+    }
+    form {
+      margin: 10px auto;
+      div {
+        margin-top: 10px;
+      }
+    }
+  }
+  .aside__subscribe {
+    justify-content: center;
+    form {
+      margin-top: -10px;
+    }
+    ul {
+      margin-bottom: 20px;
+    }
+  }
+  .popular-fashion,
+  .winter__collection {
+    padding: 0 10px;
+  }
+
+  main {
+    .Subscribe__Newsletter,
+    .collection {
+      padding: 20px 10px;
+    }
+  }
+  .footer {
+    padding: 20px;
+    justify-content: center;
+  }
+}
+
+/***********  Mobile Devices  *************/
+@media only screen and (max-width: 700px) {
+  .header {
+    .top-section {
+      justify-content: center;
+    }
+    .logo-containe {
+      display: block;
+    }
+
+    .navpar-header {
+      display: none;
+      justify-content: center;
+    }
+    .nav-bar-open {
+      display: block;
+      ul {
+        display: block;
+        background-color: $secondary;
+        padding: 20px;
+        li {
+          margin-top: 10px;
+          color: $brown;
+
+          button {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .about-fashion {
+    margin: 10px auto;
+    img {
+      margin-top: 15px;
+    }
+  }
+
+  main {
+    .Subscribe__Newsletter {
+      p {
+        margin-bottom: 10px;
+      }
+      form {
+        input {
+          width: 90%;
+        }
+        button {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  .Story__Behind {
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    img {
+      width: 90%;
+    }
+    span {
+      width: 90%;
+    }
+  }
+}
