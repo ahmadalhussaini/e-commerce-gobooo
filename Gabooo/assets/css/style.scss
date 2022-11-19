@@ -99,11 +99,14 @@ body {
   }
   .navpar-header {
     @include navbar-section;
+    margin-bottom: 20px;
+
     ul {
       list-style: none;
       display: flex;
       justify-content: space-between;
       font-size: 13px;
+
       li {
         margin-top: 45px;
         button {
@@ -244,7 +247,9 @@ body {
 .shopping-cart {
   @include dark-sections;
   padding-top: 20px;
+
   padding-bottom: 20px;
+
   .currencies {
     span {
       padding: 0 10px;

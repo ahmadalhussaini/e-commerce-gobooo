@@ -1,8 +1,9 @@
+//functionality to open,close navbar in tablets and mobile
 const nav = document.querySelector(".nav");
 function menuBar() {
   nav.classList.toggle("nav-bar-open");
 }
-
+//functionality to open,close model login
 var modal = document.getElementById("Modal-login");
 
 var Btnlogin = document.getElementById("Btn-login");
@@ -22,29 +23,29 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
-
-var modal2 = document.getElementById("Modal-Register");
+//functionality to open,close model reigister
+var modalRegister = document.getElementById("Modal-Register");
 
 var BtnRegister = document.getElementById("Btn-Register");
 
-var span2 = document.getElementById("close-Register");
+var spanregister = document.getElementById("close-Register");
 
 var Register = document.getElementById("Register");
 
 BtnRegister.onclick = function () {
-  modal2.style.display = "block";
+  modalRegister.style.display = "block";
 };
 
-span2.onclick = function () {
-  modal2.style.display = "none";
+spanregister.onclick = function () {
+  modalRegister.style.display = "none";
 };
 
 window.onclick = function (event) {
-  if (event.target == modal2) {
-    modal2.style.display = "none";
+  if (event.target == modalRegister) {
+    modalRegister.style.display = "none";
   }
 };
-
+//functionality to send masseg match or not match
 document.getElementById("txtConfirmPassword").onkeyup = function () {
   var password = document.getElementById("txtPassword").value;
   var confirmPassword = document.getElementById("txtConfirmPassword").value;
